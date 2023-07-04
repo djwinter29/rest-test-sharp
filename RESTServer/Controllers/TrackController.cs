@@ -86,5 +86,27 @@ namespace RESTServer.Controllers
 
             };
         }
+
+        /// <summary>
+        /// return google.com
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("google")]
+        public ContentResult GetGoogle()
+        {
+            HttpClient client = new HttpClient();
+            var response = client.Send(new HttpRequestMessage(HttpMethod.Get, "https://www.google.com"));
+            using var reader = new StreamReader(response.Content.ReadAsStream());
+
+            return new ContentResult
+            {
+                Content = reader.ReadToEnd(),
+                ContentType = "text/html"
+            };
+
+
+        }
+
     }
 }

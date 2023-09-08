@@ -97,7 +97,7 @@ namespace RESTServer.Controllers
         {
             HttpClient client = new HttpClient();
             var response = client.Send(new HttpRequestMessage(HttpMethod.Get, "https://www.google.com"));
-            using var reader = new StreamReader(response.Content.ReadAsStream());
+            using var reader = new StreamReader(response.Content.ReadAsStream()); 
 
             return new ContentResult
             {

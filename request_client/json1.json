@@ -1,0 +1,15 @@
+{
+  "OK": {},
+  "response": {
+    "TC_GetEncoderInputs": [ 0, 1534321325, 0, 1534321325 ]
+  },
+  "Boot": {
+    "UpTime": 1534321,
+    "ResetReason": "Software request"
+  },
+  "Run": {
+    "BaseState": "ESTOP",
+    "SubState": "BUSY"
+  },
+  "API": { "ExecTime": "0" }
+}
